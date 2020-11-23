@@ -1,0 +1,14 @@
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/service/HotelService.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/entity/Hotel.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/repository/UserRepository.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/controller/HotelController.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/controller/RoomController.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/entity/User.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/HotelFilteringApplication.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/controller/BookingController.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/repository/RoomRepository.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/controller/UserController.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/repository/HotelRepository.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/entity/Booking.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/repository/BookingRepository.java
+/home/harkati/Bureau/Reservation/HotelFiltering/src/main/java/fr/ensiie/Hotelfiltering/entity/Room.java

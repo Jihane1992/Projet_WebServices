@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.ensiie.fr/hotels_webservices/model"
+            xmlns:tns="http://www.ensiie.fr/hotels_webservices/model"
+            elementFormDefault="qualified">
+
+    <xsd:element name="GetHotelRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="date_in" default="yyyy-mm-dd" type="xsd:string" />
+                <xsd:element name="date_out" default="yyyy-mm-dd" type="xsd:string" />
+                <xsd:element name="nbr-rooms" default="0" type="xsd:long" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PostReservationRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="date_in" default="yyyy-mm-dd" type="xsd:string" />
+                <xsd:element name="date_out" default="yyyy-mm-dd" type="xsd:string" />
+                <xsd:element name="id-hotel" default="0" type="xsd:int" />
+                <xsd:element name="id-user" default="0" type="xsd:int" />
+                <xsd:element name="nbr-rooms" default="0" type="xsd:long" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetMyReservationRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id-user" default="0" type="xsd:long" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetUserRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="username" default="jihane" type="xsd:string" />
+                <xsd:element name="userpassword" default="jihane1992" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="CancelReservationRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="no-reservation" default="0" type="xsd:long" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetHotelResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="hotel" type="tns:Hotel" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetMyReservationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="reservation" type="tns:Reservation" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="GetUserResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="reponse" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="PostReservationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="reponse" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="CancelReservationResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="reponse" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name ="Hotel">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="description" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name ="Reservation">
+        <xsd:sequence>
+            <xsd:element name="idBooking" type="xsd:int"/>
+            <xsd:element name="user" type="tns:User"/>
+            <xsd:element name="room" type="tns:Room"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name ="Room">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="description" type="xsd:string"/>
+            <xsd:element name="price" type="xsd:double"/>
+            <xsd:element name="hotel" type="tns:Hotel"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name ="User">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="email" type="xsd:string"/>
+            <xsd:element name="password" type="xsd:string"/>
+            <xsd:element name="firstname" type="xsd:string"/>
+            <xsd:element name="lastname" type="xsd:string"/>
+            <xsd:element name="phone" type="xsd:string"/>
+            <xsd:element name="adresse" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
