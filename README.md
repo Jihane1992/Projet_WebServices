@@ -7,7 +7,7 @@ This project was developed using SpringBoot Spring Initializr and the following 
     ### 2 JPA
     ### 3 Lombok
    
-In this zip,there are 3 minis projects: service rest, service soap and client
+In this repository,there are 3 minis projects: service rest, service soap and client
 
 #Requirement 
 
