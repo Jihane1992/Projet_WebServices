@@ -76,7 +76,7 @@ WSDL : http://localhost:8087/ws/hotelbooking.wsdl
 
 you can test it with a client like Soapui or any other soap client.
 
-#HotelBooking Client
+## 5 HotelBooking Client
 
 Created By the tools used in your course :Axis2: Tomcat v7.0 Sever
 
