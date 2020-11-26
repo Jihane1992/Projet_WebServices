@@ -101,7 +101,7 @@ public class BookingController {
         }
     }
 
-    @GetMapping("deletebookinghotel")
+    @DeleteMapping("deletebookinghotel")
     @ResponseBody
     public void deletebookinghotel(@RequestParam("idreservation") long idreseration) throws ParseException {
                 service.deletBookingById(idreseration);
